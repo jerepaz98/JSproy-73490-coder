@@ -1,0 +1,642 @@
+@charset "UTF-8";
+/* --- SECCIÓN HERO --- */
+.responsive-body {
+  max-width: 100%;
+  box-sizing: border-box;
+  /*padding: 1rem;
+  margin: auto;*/
+  font-size: 2rem;
+}
+
+.responsive-body img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .responsive-body img {
+    width: 75%;
+  }
+}
+@media (min-width: 992px) {
+  .responsive-body img {
+    width: 50%;
+  }
+}
+@media (max-width: 768px) {
+  .responsive-body {
+    font-size: 0.95rem;
+    padding: 0.75rem; /*0.75rem*/
+  }
+}
+@media (max-width: 375px) {
+  .responsive-body {
+    font-size: 0.9rem;
+    padding: 0.5rem; /*0.5rem*/
+  }
+}
+/* Menú hamburguesa CSS puro */
+#menu-toggle:checked ~ nav .mobile-menu {
+  display: flex !important;
+}
+
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  background: #fff;
+  padding: 1rem;
+  gap: 0.75rem;
+  border-top: 1px solid #ccc;
+}
+
+.menu-icon {
+  cursor: pointer;
+}
+
+/* Responsive ajustes */
+@media (max-width: 768px) {
+  .titulo-galeria-h2 {
+    font-size: 1.75rem;
+    padding: 0.75rem 0.5rem;
+  }
+}
+@media (max-width: 375px) {
+  .titulo-galeria-h2 {
+    font-size: 1.5rem;
+    padding: 0.5rem 0.25rem;
+  }
+}
+/* ==================================== */
+/* Hero */
+.hero {
+  background-image: url("../img/img05.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100vh;
+  max-height: 1400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: relative; /* Esencial para posicionar la flecha de forma absoluta dentro de ella */
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  max-height: 600px;
+}
+
+/* ==================================== */
+/* Bienvenida*/
+.flex-container, .bienvenida {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 0 20px;
+}
+
+.bienvenida img {
+  flex: 1 1 50%;
+  max-width: 570px;
+  height: auto;
+  border-radius: 3px;
+}
+
+.bienvenida .text-container {
+  flex: 1 1 40%;
+  padding: 20px;
+}
+
+.bienvenida h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.bienvenida button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #000;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.text-container2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  height: 300px;
+  background-image: url(../img/img06.webp);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  flex-direction: center;
+  align-items: center;
+  position: relative;
+}
+
+.text-container2 h2 {
+  font-size: 23px;
+  color: #ffffff;
+}
+
+/* ==================================== */
+/* Contacto whatsapp */
+.whatsapp-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0f0f0f; /* color WhatsApp */
+  color: white;
+  text-decoration: none;
+  border-radius: 2px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+  background-color: #262927;
+}
+
+/* ==================================== */
+/* 1ra pagina "index", parte de abajo galería tipo instagram*/
+.instagram-section {
+  padding: 40px 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.instagram-section h3 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #0f0f0f;
+}
+
+.instagram-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+.instagram-grid img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 2px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.instagram-grid img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/*5ta pagina CONTACTO*/
+/*----------- Estilo del formulario ---------------*/
+.formulario-crecimiento {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 80px 60px;
+  background-color: #fff;
+  flex-wrap: wrap;
+  color: #222;
+}
+
+.contact-text {
+  flex: 1 1 40%;
+  max-width: 500px;
+  padding-right: 40px;
+}
+
+.contact-text h1 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.contact-text p {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.contact-form {
+  flex: 1 1 50%;
+  max-width: 600px;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+}
+
+.form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+  color: #111;
+}
+
+.form-group input,
+.form-group textarea {
+  border: none;
+  border-bottom: 1px solid #aaa;
+  padding: 8px 4px;
+  font-size: 1rem;
+  background: transparent;
+  color: #111;
+  outline: none;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #bbb;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.submit-button {
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+@media (max-width: 900px) {
+  .formulario-crecimiento {
+    flex-direction: column;
+    padding: 40px 30px;
+  }
+  .contact-text,
+  .contact-form {
+    max-width: 100%;
+    padding: 0;
+  }
+  .form-row {
+    flex-direction: column;
+  }
+}
+/*4ta pagina SOBRE MI*/
+/*I'am descripcion de SOBRE MI*/
+.iam {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 90px 20px;
+}
+
+.iam img {
+  flex: 1 1 50%;
+  max-width: 570px;
+  height: auto;
+  border-radius: 3px;
+}
+
+.iam .text-container {
+  flex: 1 1 40%;
+  padding: 20px;
+}
+
+.iam h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.iam strong {
+  font-weight: bold;
+  color: #050505; /* Color destacado */
+  font-size: 22px;
+}
+
+.iam button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #000;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Imagen estatica de SOBRE MI*/
+.fondo-heromod {
+  background-image: url("../img/img39.webp");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 37vh;
+  max-height: 1400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.fondo-heromod h2 {
+  font-size: 28px;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.fondo-heromod img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  max-height: 600px;
+}
+
+/*body*/
+body {
+  background-color: #ffffff;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  font-family: Helvetica Neue Bold Italic !important;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* desplazamiento chill en toda la pagina*/
+html {
+  scroll-behavior: smooth; /* Permite el desplazamiento chill */
+}
+
+/*Estilo efecto atenuado al iniciar ua pag */
+.body {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: content-fade-in 1s forwards;
+  animation-delay: 1.5s;
+}
+
+@keyframes content-fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Imagen background, intro de otras paginas (galeria, servicios, sobre mi, contacto)*/
+.heromod {
+  background-image: url("../img/img54.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 30vh;
+  max-height: 1400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.heromod img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  max-height: 600px;
+}
+
+/* Encabezado principal */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-weight: bold;
+}
+
+.nav .menu {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.menu a:hover {
+  color: #d72638;
+}
+
+/* Estilos para la flecha de desplazamiento hacia ABAJO */
+.scroll-down-arrow {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #ffffff;
+  font-size: 3rem;
+  text-decoration: none;
+  opacity: 0.7;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.scroll-down-arrow:hover {
+  opacity: 1; /* Opacidad completa al pasar el ratón */
+  transform: translateX(-50%) translateY(5px); /* Pequeño efecto de "rebote" */
+}
+
+/* ==================================== */
+/* ==================================== */
+/* Estilos para la flecha de desplazamiento hacia ARRIBA */
+.scroll-up-arrow {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+  padding: 8px 10px;
+  border-radius: 5px; /* Bordes redondeados */
+  font-size: 2rem; /* Tamaño de la flecha */
+  text-decoration: none;
+  z-index: 9000;
+  opacity: 0.8;
+  transition: opacity 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.scroll-up-arrow:hover {
+  opacity: 1; /* Opacidad completa al pasar el ratón */
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo más oscuro al pasar el ratón */
+  transform: translateY(-5px); /* Pequeño efecto de elevación al pasar el ratón */
+}
+
+/* ==================================== */
+/* ------------------ Footer ---------------------*/
+.footer {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  background-color: hsl(51.43, 17.5%, 84.31%);
+  color: rgb(16, 16, 16);
+  font-size: 14px;
+  margin-top: 30px;
+  position: relative; /* Agregado: Necesario para que la flecha "subir" se posicione correctamente */
+}
+
+.redes-sociales {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.redes-sociales a {
+  display: inline-block;
+}
+
+.redes-sociales img {
+  width: 28px;
+  height: 28px;
+  transition: opacity 0.3s ease;
+}
+
+.redes-sociales img:hover {
+  opacity: 0.7;
+}
+
+.redes-sociales a img {
+  display: none;
+}
+
+.redes-sociales a {
+  font-size: 24px; /* Tamaño de los iconos */
+  color: #333;
+  text-decoration: none;
+  margin: 0 5px; /* Espaciado entre iconos */
+  display: inline-block;
+}
+
+/* Icono de Instagram */
+.redes-sociales a img[alt=Instagram]::before {
+  font-family: "Font Awesome 6 Brands";
+  content: "\f16d";
+  display: inline-block;
+}
+
+/* Icono de Facebook */
+.redes-sociales a img[alt=Facebook]::before {
+  font-family: "Font Awesome 6 Brands";
+  content: "\f09a";
+  display: inline-block;
+}
+
+/* Icono de WhatsApp */
+.redes-sociales a img[alt=WhatsApp]::before {
+  font-family: "Font Awesome 6 Brands";
+  content: "\f232";
+  display: inline-block;
+}
+
+/* Opcional: Cambiar color al pasar el mouse */
+.redes-sociales a:hover {
+  color: #007bff;
+}
+
+.redes-sociales a img[alt=Instagram]:hover::before {
+  color: #C13584;
+}
+
+.redes-sociales a img[alt=Facebook]:hover::before {
+  color: #3b5998;
+}
+
+.redes-sociales a img[alt=WhatsApp]:hover::before {
+  color: #25D366;
+}
+
+/*
+body {
+  font-family: Arial, sans-serif;
+  margin: 2rem;
+  background-color: #f0f4f7;
+}*/
+.layout-turnos {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+form {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 5px #ccc;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+  min-width: 300px;
+  max-width: 400px;
+}
+
+.turno {
+  background: #fff;
+  border-left: 4px solid #0077cc;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 0 3px #ccc;
+}
+
+.seccion-turnos {
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+}
+
+/*# sourceMappingURL=style.css.map */

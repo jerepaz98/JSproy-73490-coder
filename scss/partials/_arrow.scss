@@ -1,0 +1,47 @@
+/* Estilos para la flecha de desplazamiento hacia ABAJO */
+@use 'variables';
+
+.scroll-down-arrow {
+  position: absolute; 
+  bottom: 30px;
+  left: 50%; 
+  transform: translateX(-50%); 
+  color: variables.$blanco;//color de la flecha
+  font-size: 3rem; 
+  text-decoration: none; 
+  opacity: 0.7;
+  transition: opacity 0.3s ease, transform 0.3s ease; 
+  cursor: pointer; 
+}
+
+.scroll-down-arrow:hover {
+  opacity: 1; /* Opacidad completa al pasar el ratón */
+  transform: translateX(-50%) translateY(5px); /* Pequeño efecto de "rebote" */
+}
+/* ==================================== */
+
+
+/* ==================================== */
+/* Estilos para la flecha de desplazamiento hacia ARRIBA */
+.scroll-up-arrow {
+  position: fixed; 
+  bottom: 20px; 
+  right: 20px; 
+  color: variables.$blanco; // Color de la flecha
+  background-color: variables.$negro-opaco-aw01; /* Fondo semi-transparente */
+  padding: 8px 10px; 
+  border-radius: 5px; /* Bordes redondeados */
+  font-size: 2rem; /* Tamaño de la flecha */
+  text-decoration: none;
+  z-index: 9000;
+  opacity: 0.8; 
+  transition: opacity 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+  cursor: pointer; 
+}
+
+.scroll-up-arrow:hover {
+  opacity: 1; /* Opacidad completa al pasar el ratón */
+  background-color: variables.$negro-opaco-aw; /* Fondo más oscuro al pasar el ratón */
+  transform: translateY(-5px); /* Pequeño efecto de elevación al pasar el ratón */
+}
+/* ==================================== */

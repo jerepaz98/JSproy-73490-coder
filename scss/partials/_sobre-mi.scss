@@ -1,0 +1,76 @@
+/*4ta pagina SOBRE MI*/
+/*I'am descripcion de SOBRE MI*/
+.iam {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 90px 20px;
+}
+
+.iam img {
+  flex: 1 1 50%;
+  max-width: 570px;
+  height: auto;
+  border-radius: 3px;
+}
+
+.iam .text-container {
+  flex: 1 1 40%;
+  padding: 20px;
+}
+
+.iam h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.iam strong {
+  font-weight: bold;
+  color: #050505; /* Color destacado */
+  font-size: 22px;
+}
+.iam button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #000;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+
+
+/* Imagen estatica de SOBRE MI*/
+
+.fondo-heromod {
+  background-image: url('../img/img39.webp');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 37vh;
+  max-height: 1400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+ .fondo-heromod h2 {
+  font-size: 28px;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.fondo-heromod img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  max-height: 600px;
+}

@@ -1,0 +1,101 @@
+/*5ta pagina CONTACTO*/
+  /*----------- Estilo del formulario ---------------*/
+  
+    .formulario-crecimiento {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 80px 60px;
+      background-color: #fff;
+      flex-wrap: wrap;
+      color: #222;
+    }
+
+    .contact-text {
+      flex: 1 1 40%;
+      max-width: 500px;
+      padding-right: 40px;
+    }
+
+    .contact-text h1 {
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+
+    .contact-text p {
+      font-size: 1.1rem;
+      font-weight: 500;
+    }
+
+    .contact-form {
+      flex: 1 1 50%;
+      max-width: 600px;
+    }
+
+    .form-row {
+      display: flex;
+      gap: 20px;
+    }
+
+    .form-group {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      font-size: 0.9rem;
+      margin-bottom: 5px;
+      color: #111;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      border: none;
+      border-bottom: 1px solid #aaa;
+      padding: 8px 4px;
+      font-size: 1rem;
+      background: transparent;
+      color: #111;
+      outline: none;
+    }
+
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
+      color: #bbb;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .submit-button {
+      background: #000;
+      color: #fff;
+      border: none;
+      padding: 10px 30px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    @media (max-width: 900px) {
+      .formulario-crecimiento {
+        flex-direction: column;
+        padding: 40px 30px;
+      }
+
+      .contact-text,
+      .contact-form {
+        max-width: 100%;
+        padding: 0;
+      }
+
+      .form-row {
+        flex-direction: column;
+      }
+    }

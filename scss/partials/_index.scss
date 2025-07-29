@@ -1,0 +1,145 @@
+/* --- SECCIÓN HERO --- */
+@use 'variables';
+@use 'responsive';
+
+/* ==================================== */
+/* Hero */
+.hero {
+  background-image: url('../img/img05.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100vh;
+  max-height: 1400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: relative; /* Esencial para posicionar la flecha de forma absoluta dentro de ella */
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  max-height: 600px;
+}
+
+/* ==================================== */
+/* Bienvenida*/
+.flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 0 20px;
+}
+
+.bienvenida {
+  @extend .flex-container;
+}
+
+.bienvenida img {
+  flex: 1 1 50%;
+  max-width: 570px;
+  height: auto;
+  border-radius: 3px;
+}
+
+.bienvenida .text-container {
+  flex: 1 1 40%;
+  padding: 20px;
+}
+
+.bienvenida h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.bienvenida button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #000;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.text-container2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  height: 300px;
+  background-image: url(../img/img06.webp);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  flex-direction: center;
+  align-items: center;
+  position: relative;
+}
+
+.text-container2 h2 {
+  font-size: 23px;
+  color: variables.$blanco;
+}
+
+/* ==================================== */
+/* Contacto whatsapp */
+.whatsapp-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0f0f0f; /* color WhatsApp */
+  color: white;
+  text-decoration: none;
+  border-radius: 2px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+  background-color: #262927;
+}
+
+/* ==================================== */
+/* 1ra pagina "index", parte de abajo galería tipo instagram*/
+.instagram-section {
+  padding: 40px 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.instagram-section h3 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #0f0f0f;
+}
+
+.instagram-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+.instagram-grid img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 2px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.instagram-grid img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}

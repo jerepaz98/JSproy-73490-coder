@@ -1,0 +1,20 @@
+//Partial imports
+//Paginas
+//Cambio de @Import a @use posiblemente en poco tiempo quede fuera de uso
+@use 'partials/index';
+//@use 'partials/galeria';
+//@use 'partials/servicios';
+@use 'partials/contacto';
+@use 'partials/sobre-mi';
+
+//Styles general
+@use 'partials/general';
+@use 'partials/header';
+@use 'partials/variables';
+@use 'partials/responsive';
+@use 'partials/arrow';
+@use 'partials/footer';
+@use 'partials/form';
+@use 'partials/login';
+
+//Antes de iniciar un cambios de estilo utilizar --> @use "variables" as variable; en cada archivo scss.

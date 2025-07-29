@@ -1,0 +1,60 @@
+
+/*body*/
+body {
+  background-color: #ffffff;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  font-family: Helvetica Neue Bold Italic !important; 
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* desplazamiento chill en toda la pagina*/
+html {
+  scroll-behavior: smooth; /* Permite el desplazamiento chill */
+}
+
+/*Estilo efecto atenuado al iniciar ua pag */
+.body {
+  opacity: 0;
+  transform: translateY(20px); 
+  animation: content-fade-in 1s forwards;
+  animation-delay: 1.5s; 
+}
+
+@keyframes content-fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Imagen background, intro de otras paginas (galeria, servicios, sobre mi, contacto)*/
+.heromod {
+  background-image: url('../img/img54.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 30vh;
+  max-height: 1400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.heromod img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  max-height: 600px;
+}

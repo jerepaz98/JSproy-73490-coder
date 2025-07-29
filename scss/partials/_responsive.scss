@@ -1,0 +1,77 @@
+//Responcive para las paginas
+//Parte del index
+.responsive-body {
+  max-width: 100%;
+  box-sizing: border-box;
+  /*padding: 1rem;
+  margin: auto;*/
+  font-size: 2rem;
+}
+
+.responsive-body img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .responsive-body img {
+    width: 75%;
+  }
+}
+
+@media (min-width: 992px) {
+  .responsive-body img {
+    width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .responsive-body {
+    font-size: 0.95rem;
+    padding: 0.75rem;/*0.75rem*/
+  }
+}
+
+@media (max-width: 375px) {
+  .responsive-body {
+    font-size: 0.9rem;
+    padding: 0.5rem; /*0.5rem*/
+  }
+}
+
+/* Menú hamburguesa CSS puro */
+#menu-toggle:checked ~ nav .mobile-menu {
+  display: flex !important;
+}
+
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  background: #fff;
+  padding: 1rem;
+  gap: 0.75rem;
+  border-top: 1px solid #ccc;
+}
+
+.menu-icon {
+  cursor: pointer;
+}
+
+//PARTE DE GALERIA
+
+/* Responsive ajustes */
+@media (max-width: 768px) {
+  .titulo-galeria-h2 {
+    font-size: 1.75rem;
+    padding: 0.75rem 0.5rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .titulo-galeria-h2 {
+    font-size: 1.5rem;
+    padding: 0.5rem 0.25rem;
+  }
+}

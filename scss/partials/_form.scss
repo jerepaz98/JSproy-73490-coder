@@ -1,0 +1,43 @@
+/*
+body {
+  font-family: Arial, sans-serif;
+  margin: 2rem;
+  background-color: #f0f4f7;
+}*/
+
+.layout-turnos {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+form {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 5px #ccc;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+  min-width: 300px;
+  max-width: 400px;
+}
+
+.turno {
+  background: #fff;
+  border-left: 4px solid #0077cc;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 0 3px #ccc;
+}
+
+.seccion-turnos {
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+}
