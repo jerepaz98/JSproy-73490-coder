@@ -16,6 +16,5 @@ document.getElementById("loginForm").addEventListener("submit", function(e) {
   // Si pasa la validación, guarda y redirige
   localStorage.setItem("usuarioAutenticado", "true");
   localStorage.setItem("correoUsuario", email);
-  window.location.href = "index.html";
+  window.location.href = "../index.html";
 });
-
