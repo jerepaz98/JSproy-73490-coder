@@ -1,4 +1,8 @@
 //Partial imports
 //Styles Login
+@use 'partials/general';
 @use 'partials/login';
-@use 'partials/form';
+@use 'partials/footer';
+
+//Style Dark Mode
+@use 'partials/dark-mode';

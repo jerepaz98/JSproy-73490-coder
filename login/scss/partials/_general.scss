@@ -1,0 +1,38 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+
+  /*height: 100vh;
+  display: grid;
+  align-items: center;*/
+}
+
+body.pagina-login {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column; /* columna: login arriba, footer abajo */
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.bg-slideshow{
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+}
+.bg-slideshow img{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out; /* <- transición */
+}
+.bg-slideshow img.activa{ opacity: 1; }

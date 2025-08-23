@@ -1,0 +1,200 @@
+/* =======================
+ Modo oscuro / claro
+   ======================= */
+
+:root {
+  --bg: #ffffff;
+  --text: #222222;
+  --card: rgba(255,255,255,0.92);
+  --footer: hsla(51.43,17.5%,84.31%,1);   /* blanco en modo claro */
+
+  --input-bg: #ffffff;
+  --input-text: #222222;
+  --input-border: #cccccc;
+
+  --btn-bg: #333333;
+  --btn-text: #ffffff;
+  --btn-bg-hover: #555555;
+
+  --icon-color: #222222;
+}
+
+body.dark-mode {
+  --bg: #121212;
+  --text: #f5f5f5;
+  --card: #1e1e1e;
+  --footer: #000000;   /* negro sólido en modo oscuro */
+
+  --input-bg: #1b1b1b;
+  --input-text: #f5f5f5;
+  --input-border: #444444;
+
+  --btn-bg: #2b2b2b;
+  --btn-text: #f5f5f5;
+  --btn-bg-hover: #3a3a3a;
+
+  --icon-color: #f5f5f5;
+}
+
+/* =======================
+   Global
+   ======================= */
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  transition: background .3s ease, color .3s ease;
+}
+
+body.dark-mode {
+  --icon-color: #ffffff; /* más blanco que gris */
+}
+
+/* Header y Footer */
+header, footer {
+  background: var(--card);
+  color: var(--text);
+  transition: background .3s ease, color .3s ease;
+}
+
+/* Links */
+a {
+  color: var(--text);
+  text-decoration: none;
+  transition: color .2s ease;
+}
+a:hover { opacity: .8; }
+
+/* Botones */
+button {
+  background: var(--btn-bg);
+  
+  border: none;
+  border-radius: 5px;
+  padding: 8px 14px;
+  cursor: pointer;
+  background: transparent;
+  transition: background .2s ease, color .2s ease;
+}
+button:hover {background: var(--btn-bg-hover);}
+
+/* Estilo general de iconos */
+button svg,
+button i,
+.icon {
+  color: var(--icon-color);
+  fill: var(--icon-color);   /* Para SVG */
+  stroke: var(--icon-color); /* Si el ícono usa stroke */
+  opacity: 1 !important;     /* Elimina sombreado */
+}
+
+/* Main y secciones */
+main, section {
+  background: var(--bg);
+  color: var(--text);
+  transition: background .3s ease, color .3s ease;
+}
+
+/* Contenedores de texto */
+.text-container, .text-container2 {
+  color: var(--text);
+  padding: 20px;
+  border-radius: 0px;
+  transition: background .3s ease, color .3s ease;
+}
+
+/* Sección de turnos */
+.seccion-turnos {
+  background: var(--card);
+  color: var(--text);
+  padding: 15px;
+  border-radius: 6px;
+}
+
+/* Inputs */
+input, textarea {
+  background: var(--input-bg);
+  color: var(--input-text);
+  border: 1px solid var(--input-border);
+  border-radius: 5px;
+  padding: 10px;
+  transition: background .3s ease, color .3s ease, border-color .2s ease;
+}
+input::placeholder, textarea::placeholder { color: rgba(127,127,127,.8); }
+body.dark-mode input::placeholder,
+body.dark-mode textarea::placeholder { color: rgba(220,220,220,.7); }
+
+/* Footer */
+footer {
+  width: 100%;
+  background: var(--footer);   /* usa variable */
+  color: var(--text);
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 14px;
+  position: relative;
+  z-index: 1;
+}
+
+/* =======================
+   Sección reservas
+   ======================= */
+.instagram-section {
+  background: var(--bg);     /* fondo general */
+  color: var(--text);
+  padding: 40px 20px;
+}
+
+.layout-turnos {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+#formTurno {
+  flex: 1;
+  min-width: 280px;
+  background: var(--card);   /* tarjeta clara u oscura */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,.1);
+}
+
+.seccion-turnos {
+  flex: 1;
+  min-width: 280px;
+  background: var(--card);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,.1);
+  color: var(#222222);
+}
+
+#formTurno input,
+#formTurno button {
+  width: 100%;
+  margin: 8px 0;
+}
+
+/* Iconos (hamburguesa, redes, etc.) */
+i, .bi {
+  color: var(--icon-color);
+  transition: color .3s ease;
+}
+
+/* Botón Dark Mode */
+.modo-btn {
+  position: fixed;
+  top: 15px;
+  right: 62px;
+  padding: 8px 12px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  background: var(--card);
+  color: var(--text);
+  box-shadow: 0 1px 0px rgba(0,0,0,.3);
+  transition: background .3s ease, color .3s ease, opacity .2s ease;
+}
+.modo-btn:hover { opacity: .85; }

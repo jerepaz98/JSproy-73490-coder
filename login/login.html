@@ -2,12 +2,46 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Gabs - MuchasAulas</title>
-  <!-- Estilo CSS-->
-  <link rel="stylesheet" href="./css/style.css"/>
+  <!-- CSS principal -->
+  <link rel="stylesheet" href="./css/style.css" />
+
+  <!-- Estilo SASS-->
+  <link rel="stylesheet" href="./scss/style.scss">
+
+  <!-- Fotorama CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+  <link href="/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+
+  <!-- Fuentes -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <!-- <link rel="preload" href="./fonts/HelveticaNeueRegular.ttf">  -->
+
+  <!-- Icono de la página -->
+  <link rel="icon" href="#" alt="icono del logo" type="image/x-icon">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+
 </head>
-<body class="pagina-login">
+<body class="pagina-login dark-mode">
+
+  <!-- Botón Dark Mode <button id="toggle-dark" class="btn btn-dark">Modo Oscuro</button> -->
+  <button id="toggle-dark" class="modo-btn">🌙</button>
+
+
+ <!-- Fondo autoplay -->
+  <div class="bg-slideshow">
+    <img src="./img/img05.jpg">
+    <img src="./img/img07.jpeg">
+    <img src="./img/img08.webp">
+    <img src="./img/img06.webp">
+  </div>
+
+  <!-- Contenedor login -->
   <div class="contenedor-login">
     <h2>Iniciar sesión</h2>
     <form id="loginForm">
@@ -19,6 +53,52 @@
   </div>
 
 
+ <!--Foooter-->
+  <footer class="footer dark-mode">
+        <p>&copy; 2025 Gabrielle Moraes Da Costa | MuchasAulas. Todos los derechos reservados.</p>
+        <div class="redes-sociales">
+            <a href="https://www.instagram.com/med.congabi?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
+                <i class="fab fa-instagram" title="Instagram"></i>
+            </a>
+            <a href="#" target="_blank">
+                <i class="fab fa-facebook" title="Facebook"></i>
+            </a>
+            <a href="#" target="_blank"> <!-- https://wa.me/+5493417195275 -->
+                <i class="fab fa-whatsapp" title="WhatsApp"></i>
+            </a>
+        </div>
+    </footer>
+
+
+
+  <!-- Fotorama JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+ 
+  <!-- JS del login -->
   <script src="./js/login.js"></script>
+
+  <!-- JS del dark mode -->
+   <script>
+  const btn = document.getElementById("toggle-dark");
+
+  btn.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+
+    // Guardar preferencia en localStorage
+    if(document.body.classList.contains("dark-mode")){
+      localStorage.setItem("theme", "dark");
+    } else {
+      localStorage.setItem("theme", "light");
+    }
+  });
+
+  // Al cargar la página, recuperar preferencia
+  if(localStorage.getItem("theme") === "dark"){
+    document.body.classList.add("dark-mode");
+  }
+</script>
 </body>
 </html>

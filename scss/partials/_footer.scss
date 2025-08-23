@@ -1,12 +1,17 @@
-/* ------------------ Footer ---------------------*/
+/* ------------------ Variables globales --------------------- */
+
+
+/* ------------------ Footer --------------------- */
 .footer {
   text-align: center;
   padding: 1.5rem 1rem;
-  background-color: hsla(51.43,17.5%,84.31%,1);
-  color: rgb(16, 16, 16);
+  background-color: var(--footer);
+  color: var(--text);
   font-size: 14px;
-  margin-top: 30px;
-  position: relative; /* Agregado: Necesario para que la flecha "subir" se posicione correctamente */
+  margin-top: 0px;
+  width: 100%;
+  z-index: 1;
+  position: relative;
 }
 
 .redes-sociales {
@@ -18,6 +23,7 @@
 
 .redes-sociales a {
   display: inline-block;
+  color: var(--icon-color);
 }
 
 .redes-sociales img {
@@ -30,51 +36,48 @@
   opacity: 0.7;
 }
 
-
 .redes-sociales a img {
-  display: none; 
+  display: none;
 }
-
 
 .redes-sociales a {
-  font-size: 24px; /* Tamaño de los iconos */
-  color: #333; 
-  text-decoration: none; 
-  margin: 0 5px; /* Espaciado entre iconos */
-  display: inline-block; 
+  font-size: 24px;
+  text-decoration: none;
+  margin: 0 5px;
 }
 
-/* Icono de Instagram */
+/* Iconos usando Font Awesome */
 .redes-sociales a img[alt="Instagram"]::before {
-  font-family: "Font Awesome 6 Brands"; 
-  content: "\f16d"; 
-  display: inline-block; 
+  font-family: "Font Awesome 6 Brands";
+  content: "\f16d";
+  display: inline-block;
 }
 
-/* Icono de Facebook */
 .redes-sociales a img[alt="Facebook"]::before {
   font-family: "Font Awesome 6 Brands";
-  content: "\f09a"; 
+  content: "\f09a";
   display: inline-block;
 }
 
-/* Icono de WhatsApp */
 .redes-sociales a img[alt="WhatsApp"]::before {
   font-family: "Font Awesome 6 Brands";
-  content: "\f232"; 
+  content: "\f232";
   display: inline-block;
 }
 
-/* Opcional: Cambiar color al pasar el mouse */
+/* Hover effects */
 .redes-sociales a:hover {
-    color: #007bff; 
+  color: #007bff;
 }
+
 .redes-sociales a img[alt="Instagram"]:hover::before {
-  color: #C13584; 
+  color: #C13584;
 }
+
 .redes-sociales a img[alt="Facebook"]:hover::before {
-  color: #3b5998; 
+  color: #3b5998;
 }
+
 .redes-sociales a img[alt="WhatsApp"]:hover::before {
-  color: #25D366; 
+  color: #25D366;
 }

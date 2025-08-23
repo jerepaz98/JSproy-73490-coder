@@ -1,0 +1,159 @@
+/* =======================
+   Tema: dark mode
+   ======================= */
+:root {
+  --bg: #ffffff;
+  --text: #222222;
+  --card: rgba(255,255,255,0.92);
+  --footer: rgba(255,255,255,0.85);
+
+  --input-bg: #ffffff;
+  --input-text: #222222;
+  --input-border: #cccccc;
+
+  --btn-bg: #333333;
+  --btn-text: #ffffff;
+  --btn-bg-hover: #555555;
+}
+
+/* Modo oscuro: solo cambiamos variables */
+body.dark-mode {
+  --bg: #121212;
+  --text: #f5f5f5;
+  --card: rgba(30,30,30,0.9);
+  --footer: rgba(20,20,20,0.85);
+
+  --input-bg: #1b1b1b;
+  --input-text: #f5f5f5;
+  --input-border: #444444;
+
+  --btn-bg: #2b2b2b;
+  --btn-text: #f5f5f5;
+  --btn-bg-hover: #3a3a3a;
+}
+
+/* =======================
+   Aplicación de estilos
+   ======================= */
+html, body {
+  height: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: Arial, sans-serif;
+  transition: background .3s ease, color .3s ease;
+}
+
+/* Slideshow de fondo atrás */
+.bg-slideshow, .fotorama-background {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+}
+
+/* Contenedor de login */
+.contenedor-login {
+  background: var(--card);
+  color: var(--text);             /* Fuerza heredar el color del tema */
+  padding: 30px 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  z-index: 1;
+}
+
+/* Títulos y textos (evitá colores fijos como #333) */
+.contenedor-login h1,
+.contenedor-login h2,
+.contenedor-login p,
+.contenedor-login label {
+  color: var(--text);
+}
+
+/* Inputs */
+.contenedor-login input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  background: var(--input-bg);
+  color: var(--input-text);
+  border: 1px solid var(--input-border);
+  border-radius: 5px;
+  transition: background .2s ease, color .2s ease, border-color .2s ease, box-shadow .2s ease;
+}
+
+.contenedor-login input::placeholder {
+  color: rgba(127,127,127,.9);
+}
+body.dark-mode .contenedor-login input::placeholder {
+  color: rgba(220,220,220,.75);
+}
+
+.contenedor-login input:focus {
+  outline: none;
+  border-color: var(--btn-bg);
+  box-shadow: 0 0 0 3px rgba(0,0,0,.1);
+}
+
+/* Botón */
+.contenedor-login button {
+  width: 100%;
+  padding: 10px;
+  background: var(--btn-bg);
+  color: var(--btn-text);
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background .2s ease, color .2s ease;
+}
+
+.contenedor-login button:hover {
+  background: var(--btn-bg-hover);
+}
+
+/* Mensaje de error */
+.mensaje-error { color: #ff5a5a; }
+
+/* Footer abajo, con colores del tema */
+footer {
+  width: 100%;
+  background: var(--footer);
+  color: var(--text);
+  text-align: center;
+  padding: 10px;
+  font-size: 14px;
+  position: relative;
+  z-index: 1;
+}
+
+.dark-mode footer {
+  background-color: #121212; /* o el tono oscuro que quieras */
+  color: white;
+}
+/* Modo oscuro */
+body.dark footer {
+  background-color: rgba(0, 0, 0, 0.3); /* Negro transparente */
+  color: #fff;
+}
+
+/* Botón flotante para cambiar tema */
+.modo-btn {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  padding: 8px 12px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  background: var(--card);
+  color: var(--text);
+  box-shadow: 0 2px 5px rgba(0,0,0,.3);
+  transition: background .3s ease, color .3s ease, opacity .2s ease;
+}
+.modo-btn:hover { opacity: .85; }

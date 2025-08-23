@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Inicio | Gabs-Aulas</title>
+
+  <!-- Meta etiquetas para SEO -->
+  <meta name="keywords" content="mentoría medicina, clases de medicina, aula virtual medicina, anatomía, fisiología, histología, bioquímica, microbiología, inmunología, patología, farmacología, clínica médica, clases grabadas medicina, exámenes resueltos medicina, tutorías medicina, apoyo académico medicina">
+  <meta name="description" content="Mentoría en medicina con clases virtuales, grabadas y tutorías personalizadas. Accede a packs de estudio con exámenes resueltos, guías exclusivas y preparación intensiva en materias como anatomía, fisiología, bioquímica, patología, farmacología y más.">
+  <meta name="author" content="Gabriella Moraes Da Costa">
+
+  <!-- Icono de la página -->
+  <link rel="icon" href="#" alt="icono del logo" type="image/x-icon">
+
+  <!-- Estilo CSS-->
+  <link rel="stylesheet" href="../css/style.css">
+
+  <!-- Estilo SASS-->
+  <link rel="stylesheet" href="../scss/style.scss">
+
+  <!-- Fuentes -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- <link rel="preload" href="./fonts/HelveticaNeueRegular.ttf">  -->
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+  <link rel="script" href="./js/app.js">
+ </head>
+<body class="dark-mode">
+
+<!-- Pantalla de Login -->
+<script>
+  if (!localStorage.getItem("usuarioAutenticado")) {
+    window.location.href = "../login/login.html";
+  }
+</script>
+
+<!--HEADER-->
+<header class="container-fluid d-flex justify-content-between align-items-center px-3 py-2 border-bottom" id="top-menu">
+  <!-- Logo -->
+  <div class="logo fw-bold">
+    <b>GM</b>| Aulas
+  </div>
+
+  <!-- Botón hamburguesa (mobile y desktop) -->
+  <button class="border-0 bg-transparent" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu">
+    <i class="bi bi-list fs-2"></i>
+  </button>
+
+  <!-- Menú lateral Offcanvas -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title fw-bold" id="offcanvasMenuLabel">Menú</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="navbar-nav text-end">
+        <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Galería</a></li>
+        <li class="nav-item"><a class="nav-link" href="../pages/servicios.html">Servicios</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Sobre mí</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
+        <button onclick="cerrarSesion()">Cerrar sesión</button>
+        <button id="toggle-dark" class="modo-btn">🌙</button>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<section class="heromod">
+    <h1 class="focus-in-expand">Servicios</h1>
+</section>
+
+<!-- Intro a los planes-->
+<main>
+   <section id="main-content" class="bienvenida">
+    <img src="../img/img01.jpeg" alt="Profesora de Medicina" class="img-fluid w-100 w-md-75 w-lg-50">
+    
+    <div class="text-container">
+      <h2>TU FUTURO EN LA MEDICINA</h2>
+      <p>
+        Sabemos que estudiar medicina no es un camino fácil, y por eso diseñamos un espacio pensado para 
+        acompañarte en cada etapa de tu formación. Nuestro objetivo es brindarte clases dinámicas, guías claras 
+        y mentorías personalizadas que transformen tu manera de aprender.
+      </p>
+      <p>
+        Te ofrecemos <strong>planes y servicios flexibles</strong> que se adaptan a tus necesidades: desde clases en vivo 
+        y tutorías grupales hasta acceso a grabaciones y packs intensivos para rendir con confianza. 
+        Todo lo que necesitás para avanzar en asignaturas como 
+        <strong>Anatomía, Fisiología, Bioquímica, Patología y Farmacología</strong>, en un solo lugar.
+      </p>
+      <p>
+        Explorá nuestras opciones y elegí el plan que mejor se ajuste a tu forma de estudiar. 
+        La medicina se aprende con constancia, pasión y acompañamiento, y estamos aquí para hacerlo posible.
+      </p>
+    </div>
+  </section>
+</main>
+
+  
+<!-- Planes de servicios -->
+<section  class=" planes-contenedor fond-heromod "> <!-- class="planes-contenedor"-->
+<h2 class="planes-titulo">Packs de Promos Aula de Medicina</h2>
+<div class="planes-wrapper">
+  <div class="plan-card">
+    <span class="numero">01</span>
+    <h3>Pack Aula Virtual</h3>
+    <h4>4 clases en vivo</h4>
+    <p>Clases en tiempo real con interacción directa</p>
+    <p>4 encuentros de 90 min.</p>
+    <p>Material complementario en PDF.</p>
+    <span class="precio"> U$D 60 | ARS $55.000 </span>
+  </div>
+  <div class="plan-card">
+    <span class="numero">02</span>
+    <h3>Pack Clases Grabadas</h3>
+    <h4>Acceso 1 mes</h4>
+    <p>Contenido grabado para estudiar en cualquier momento.</p>
+    <p>Más de 10 horas de grabaciones.</p>
+    <p>Acceso desde cualquier dispositivo.</p>
+    <span class="precio">U$D 40 | ARS $36.500 </span>
+  </div>
+  <div class="plan-card">
+    <span class="numero">03</span>
+    <h3>Pack Mentoría Intensiva</h3>
+    <h4>8 horas personalizadas</h4>
+    <p>Acompañamiento individual o grupal reducido.</p>
+    <p>Horarios flexibles.</p>
+    <p>Casos clínicos + preparación de exámenes.</p>
+    <span class="precio">U$D 120 | ARS $110.000 </span>
+  </div>
+  <div class="plan-card">
+    <span class="numero">04</span>
+    <h3>Pack Exámenes Resueltos</h3>
+    <h4>+ Guía</h4>
+    <p>Colección de parciales y finales resueltos.</p>
+    <p>Explicaciones paso a paso.</p>
+    <p>Guías de estudio exclusivas.</p>
+    <span class="precio">U$D 25 | ARS $23.000 </span>
+</div>
+  <div class="plan-card">
+    <span class="numero">05</span>
+    <h3>Pack Tutorías Grupales</h3>
+    <p>Espacios de intercambio con otros estudiantes.</p>
+    <p>Grupos de hasta 10 alumnos.</p>
+    <p>Preguntas + simulacros de exámenes.</p>
+    <span class="precio">U$D 35 | ARS $32.000 </span>
+</div>
+  <div class="plan-card">
+    <span class="numero">06</span>
+    <h3>Pack Premium Medicina</h3>
+    <h4>(Todo Incluido)</h4>
+    <p>Acceso completo a todas las modalidades.</p>
+    <p>Aula virtual + clases grabadas.</p>
+    <p>Exámenes resueltos + guías exclusivas</p>
+    <p>Tutorías grupales ilimitadas.</p>
+    <span class="precio">U$D 200 | ARS $185.000 </span>
+</div>
+</section>
+
+
+<!-- seccion final -->
+<section>
+<div class="section-container">
+  <div class="text-content">
+    <h1>TU FUTURO <br> EN LA MEDICINA</h1>
+    <p>
+      ESTUDIAR ES CONSTRUIR EL CAMINO HACIA TU VOCACIÓN<br>
+      CADA CLASE ES UNA OPORTUNIDAD DE CRECER<br><br>
+      BUSCO QUE CADA LECCIÓN HABLE POR SÍ SOLA<br>
+      NO DOY CLASES, CREO PROFESIONALES
+    </p>
+    <!--<button>Hazlo</button>-->
+  </div>
+
+  <div class="image-content">
+    <img src="../img/img02.jpeg" alt="Clase virtual medicina" class="image-main">
+    <img src="../img/img03.jpg" alt="Anatomía" class="image-overlay hidden">
+  </div>
+</div>
+</section>
+
+<!--testimonios-->
+<!-- class="testimonios"-->
+<section>
+<div class="container py-5">
+  <!-- Rating Header -->
+  <div class="rating-header mb-5">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/320px-Google_2015_logo.svg.png" width="28" alt="Google">
+    <strong class="ms-2 me-2 fs-5">Rating</strong>
+    <span class="text-warning fw-bold fs-5">4.9 ★★★★★</span>
+    <span class="text-secondary ms-2">(Basado en 59 reseñas)</span>
+    <a href="#" class="btn btn-primary btn-sm ms-3">Escribe una reseña</a>
+  </div>
+
+  <!-- Reseñas -->
+  <div class="row g-4">
+    <!-- Review 1 -->
+    <div class="col-md-4">
+      <div class="review-card">
+        <img src="https://i.pravatar.cc/100?img=21" class="profile-pic" alt="Cliente 1">
+        <h5>Laura Martínez</h5>
+        <div class="star-rating mb-1">★★★★★</div>
+        <small class="text-muted mb-2 d-block">15 de abril de 2025</small>
+        <p>"¡Las fotos de nuestra boda quedaron espectaculares! Capturaste cada momento mágico."</p>
+      </div>
+    </div>
+
+    <!-- Review 2 -->
+    <div class="col-md-4">
+      <div class="review-card">
+        <img src="https://i.pravatar.cc/100?img=24" class="profile-pic" alt="Cliente 2">
+        <h5>Sofía Herrera</h5>
+        <div class="star-rating mb-1">★★★★★</div>
+        <small class="text-muted mb-2 d-block">10 de marzo de 2025</small>
+        <p>"Profesionalismo total. Supo cómo hacernos sentir cómodos en nuestra sesión de compromiso."</p>
+      </div>
+    </div>
+
+    <!-- Review 3 -->
+    <div class="col-md-4">
+      <div class="review-card">
+        <img src="https://i.pravatar.cc/100?img=17" class="profile-pic" alt="Cliente 3">
+        <h5>Carlos Gómez</h5>
+        <div class="star-rating mb-1">★★★★★</div>
+        <small class="text-muted mb-2 d-block">28 de enero de 2025</small>
+        <p>"Gracias por inmortalizar el bautizo de nuestra hija. ¡Las fotos son un tesoro para siempre!"</p>
+      </div>
+    </div>
+
+    <!-- Review 4 -->
+    <div class="col-md-4">
+      <div class="review-card">
+        <img src="https://i.pravatar.cc/100?img=30" class="profile-pic" alt="Cliente 4">
+        <h5>Mariana Ruiz</h5>
+        <div class="star-rating mb-1">★★★★★</div>
+        <small class="text-muted mb-2 d-block">2 de febrero de 2025</small>
+        <p>"El mejor fotógrafo de eventos que hemos tenido. ¡Captura emociones de verdad!"</p>
+      </div>
+    </div>
+
+    <!-- Review 5 -->
+    <div class="col-md-4">
+      <div class="review-card">
+        <img src="https://i.pravatar.cc/100?img=37" class="profile-pic" alt="Cliente 5">
+        <h5>Julián Torres</h5>
+        <div class="star-rating mb-1">★★★★★</div>
+        <small class="text-muted mb-2 d-block">20 de diciembre de 2024</small>
+        <p>"Excelente servicio y calidad en cada toma. ¡100% recomendado!"</p>
+      </div>
+    </div>
+
+    <!-- Review 6 -->
+    <div class="col-md-4">
+      <div class="review-card">
+        <img src="https://i.pravatar.cc/100?img=41" class="profile-pic" alt="Cliente 6">
+        <h5>Ana Beltrán</h5>
+        <div class="star-rating mb-1">★★★★★</div>
+        <small class="text-muted mb-2 d-block">5 de noviembre de 2024</small>
+        <p>"Supo encontrar la luz perfecta para cada foto. ¡Una mirada artística increíble!"</p>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+  <!--Foooter-->
+  <footer class="footer ">
+        <p>&copy; 2025 Gabrielle Moraes Da Costa | MuchasAulas. Todos los derechos reservados.</p>
+        <div class="redes-sociales">
+            <a href="https://www.instagram.com/med.congabi?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
+                <i class="fab fa-instagram" title="Instagram"></i>
+            </a>
+            <a href="#" target="_blank">
+                <i class="fab fa-facebook" title="Facebook"></i>
+            </a>
+            <a href="#" target="_blank"> <!-- https://wa.me/+54 -->
+                <i class="fab fa-whatsapp" title="WhatsApp"></i>
+            </a>
+        </div>
+        <!-- Botón de desplazamiento hacia arriba -->
+        <a href="#top-menu" class="scroll-up-arrow">
+            <i class="fas fa-arrow-circle-up"></i> </a>
+    </footer>
+
+    <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+ <script src="../js/app.js"></script>
+ 
+ <!--Login-->
+ <script>
+ function cerrarSesion() {
+    localStorage.removeItem("usuarioAutenticado");
+    localStorage.removeItem("correoUsuario");
+    window.location.href = "./login/login.html";
+  }
+  </script>
+
+  <!-- JS del dark mode -->
+   <script>
+  const btn = document.getElementById("toggle-dark");
+
+  btn.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+
+    // Guardar preferencia en localStorage
+    if(document.body.classList.contains("dark-mode")){
+      localStorage.setItem("theme", "dark");
+    } else {
+      localStorage.setItem("theme", "light");
+    }
+  });
+
+  // Al cargar la página, recuperar preferencia
+  if(localStorage.getItem("theme") === "dark"){
+    document.body.classList.add("dark-mode");
+  }
+</script>
+  </body>
+</html>

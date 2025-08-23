@@ -1,5 +1,6 @@
 //Login Page Styles
 
+/*Prueba en general body
 .pagina-login {
   height: 100vh;
   display: flex;
@@ -7,8 +8,9 @@
   align-items: center;
   background-color: #f0f0f0;
 }
+*/
 
-// Caja de login
+/* Caja de login
 .contenedor-login {
   background: white;
   padding: 30px 40px;
@@ -19,8 +21,48 @@
   width: 100%;
   max-width: 400px;
 
+
+  Caja de login 
+.contenedor-login {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 30px 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  margin-top: auto;   
+  margin-bottom: auto;
+  z-index: 1;
+
+  position: relative;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 10px;
+  width: 300px;
+  margin: auto;
+  top: 50%;
+  transform: translateY(-50%);
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+*/
+
+.contenedor-login {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 30px 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  margin-top: auto;   
+  margin-bottom: auto;
+  z-index: 1;
+
   h1 {
     margin-bottom: 20px;
+    text-align: center;
   }
 
   form {

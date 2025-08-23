@@ -1,0 +1,289 @@
+/*3ra pagina de Servicios*/  
+@use "variables" as variable;
+
+
+// Anulcion de Bootstrap
+
+html body .border-bottom {
+  border-bottom: none !important;
+}
+
+.text-container {
+  /* width: auto; */
+  flex-grow: 1; /* Permite que el contenedor de texto crezca */
+  margin-left: 20px; /* Agrega algo de espacio entre la imagen y el texto */
+}
+
+/*-----------------PLANES---------------------*/
+.planes-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.plan-card {
+  background-color: variable.$blancosolido;
+  padding: 4rem 1.5rem;
+  border-radius: 5px;
+  box-shadow: 0 8px 20px variable.$negro-o-t;
+  width: 300px;
+  position: relative;
+  /*font-family: 'Open Sans', sans-serif;*/
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.plan-card .numero {
+  position: absolute;
+  top: 1rem;
+  /*left: 1rem; deja numero lat izq*/
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: variable.$gris;
+}
+
+.plan-card h3 {
+  font-family: Helvetica Neue Bold Italic;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: variable.$night;
+}
+
+.plan-card h4 {
+  font-family: Helvetica Neue Bold Italic;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: variable.$night;
+}
+
+.plan-card p {
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.plan-card .precio {
+  margin-top: 1rem;
+  display: block;
+  font-weight: bold;
+  font-size: 1rem;
+  color: variable.$azure;
+}
+
+/* Para título centrado de la sección */
+.planes-titulo {
+  font-size: 2rem;
+  font-family: Helvetica Neue Bold Italic;
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 40px;
+  color: variable.$blanco;
+}
+
+
+/* Imagen intro de fondo servicios*/
+.fond-heromod {
+  background-image: url('../img/img05.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 200vh;
+  max-height: 1556px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; 
+}
+
+ .fond-heromod h2 {
+  font-size: 28px;
+  color: variable.$blanco;
+  margin-bottom: 20px;
+}
+
+.fond-heromod::before {
+    content: ""; 
+    background-image: url('../img/img05.jpg');
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; 
+    z-index: -1; 
+    filter: grayscale(100%) brightness(67%) contrast(106%);
+    -webkit-filter: grayscale(100%) brightness(67%) contrast(106%);
+    /* Otros filtros : blur(2px), sepia(50%), hue-rotate(90deg) */
+}
+.fond-heromod > * { 
+    position: relative;
+    z-index: 1;
+}
+
+/*====================================================*/
+/*SECION ANTES DEL COMENTARIOS*/
+.section-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  font-family: 'Segoe UI', sans-serif;
+
+  background-color: var(--bg);   /* antes: variable.$blanco */
+  color: var(--text);            /* antes: #1d1d1d */
+
+  padding: 174px 8px;
+  box-sizing: border-box;
+}
+
+.text-content {
+  flex: 1 1 45%;
+  padding-right: 30px;
+}
+
+.text-content h1 {
+  font-size: 3rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+  line-height: 1.2;
+  color: var(--text);
+}
+
+.text-content p {
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--text);   /* antes: #333 */
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+
+.text-content button {
+  background-color: var(--btn-bg);   /* antes: black */
+  color: var(--btn-text);            /* antes: white */
+  padding: 14px 36px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.text-content button:hover {
+  background-color: var(--btn-bg-hover); /* antes: #333 */
+}
+
+.image-content {
+  position: relative;
+  flex: 1 1 50%;
+  min-width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-main {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 4px;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 55%;
+  left: 10%;
+  transform: translateY(-50%);
+  width: 180px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  border-radius: 6px;
+  z-index: 2;
+}
+
+    @media screen and (max-width: 768px) {
+      .section-container {
+        flex-direction: column;
+      }
+      .text-content {
+        padding-right: 0;
+        margin-bottom: 2rem;
+      }
+      .image-overlay {
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 140px;
+      }
+    }
+
+
+
+/*====================================================*/
+/*--------- Testimonios --------*/
+
+.rating-header {
+  background: var(--card);
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-family: Helvetica Neue, sans-serif;
+  color: var(--text); /* 🔹 se adapta al modo */
+}
+
+.rating-header img,
+.rating-header svg {
+  width: 80px;
+}
+
+.review-card {
+  background: var(--card); /* 🔹 usa color adaptable */
+  color: var(--text);      /* 🔹 texto adaptable */
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.review-card:hover {
+  transform: translateY(-5px);
+}
+
+.profile-pic {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  border: 3px solid var(--card);
+  box-shadow: 0 0 0 3px var(--input-border); /* se adapta al modo */
+}
+
+.star-rating {
+  color: #fbc02d; /* las estrellas quedan fijas amarillas */
+  font-size: 1.2rem;
+}
+
+/* Fechas o texto secundario */
+.review-card .date {
+  color: var(--icon-color);
+}
+
+.review-card .quote {
+  color: var(--icon-color);
+  font-style: italic;
+}

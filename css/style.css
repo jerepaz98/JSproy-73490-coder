@@ -206,177 +206,283 @@
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
 
-/*5ta pagina CONTACTO*/
-/*----------- Estilo del formulario ---------------*/
-.formulario-crecimiento {
+/*3ra pagina de Servicios*/
+html body .border-bottom {
+  border-bottom: none !important;
+}
+
+.text-container {
+  /* width: auto; */
+  flex-grow: 1; /* Permite que el contenedor de texto crezca */
+  margin-left: 20px; /* Agrega algo de espacio entre la imagen y el texto */
+}
+
+/*-----------------PLANES---------------------*/
+.planes-wrapper {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 80px 60px;
-  background-color: #fff;
+  justify-content: center;
+  gap: 2rem;
   flex-wrap: wrap;
-  color: #222;
-}
-
-.contact-text {
-  flex: 1 1 40%;
-  max-width: 500px;
-  padding-right: 40px;
-}
-
-.contact-text h1 {
-  font-size: 2.8rem;
-  margin-bottom: 20px;
-  line-height: 1.2;
-}
-
-.contact-text p {
-  font-size: 1.1rem;
-  font-weight: 500;
-}
-
-.contact-form {
-  flex: 1 1 50%;
-  max-width: 600px;
-}
-
-.form-row {
-  display: flex;
-  gap: 20px;
-}
-
-.form-group {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 20px;
-}
-
-.form-group label {
-  font-size: 0.9rem;
-  margin-bottom: 5px;
-  color: #111;
-}
-
-.form-group input,
-.form-group textarea {
-  border: none;
-  border-bottom: 1px solid #aaa;
-  padding: 8px 4px;
-  font-size: 1rem;
-  background: transparent;
-  color: #111;
-  outline: none;
-}
-
-.form-group input::placeholder,
-.form-group textarea::placeholder {
-  color: #bbb;
-}
-
-textarea {
-  resize: vertical;
-  min-height: 100px;
-}
-
-.submit-button {
-  background: #000;
-  color: #fff;
-  border: none;
-  padding: 10px 30px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: bold;
-  margin-top: 10px;
-}
-
-@media (max-width: 900px) {
-  .formulario-crecimiento {
-    flex-direction: column;
-    padding: 40px 30px;
-  }
-  .contact-text,
-  .contact-form {
-    max-width: 100%;
-    padding: 0;
-  }
-  .form-row {
-    flex-direction: column;
-  }
-}
-/*4ta pagina SOBRE MI*/
-/*I'am descripcion de SOBRE MI*/
-.iam {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 40px;
   max-width: 1200px;
-  margin: 80px auto;
-  padding: 90px 20px;
+  margin: 60px auto;
+  padding: 0 20px;
 }
 
-.iam img {
-  flex: 1 1 50%;
-  max-width: 570px;
-  height: auto;
-  border-radius: 3px;
-}
-
-.iam .text-container {
-  flex: 1 1 40%;
-  padding: 20px;
-}
-
-.iam h2 {
-  font-size: 28px;
-  margin-bottom: 15px;
-}
-
-.iam strong {
-  font-weight: bold;
-  color: #050505; /* Color destacado */
-  font-size: 22px;
-}
-
-.iam button {
-  margin-top: 20px;
-  padding: 10px 20px;
-  background-color: #000;
-  color: white;
-  border: none;
-  cursor: pointer;
+.plan-card {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 4rem 1.5rem;
   border-radius: 5px;
-}
-
-/* Imagen estatica de SOBRE MI*/
-.fondo-heromod {
-  background-image: url("../img/img39.webp");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  height: 37vh;
-  max-height: 1400px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  width: 300px;
+  position: relative;
+  /*font-family: 'Open Sans', sans-serif;*/
+  text-align: left;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: white;
+  text-align: center;
 }
 
-.fondo-heromod h2 {
+.plan-card .numero {
+  position: absolute;
+  top: 1rem;
+  /*left: 1rem; deja numero lat izq*/
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #999;
+}
+
+.plan-card h3 {
+  font-family: Helvetica Neue Bold Italic;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #111;
+}
+
+.plan-card h4 {
+  font-family: Helvetica Neue Bold Italic;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #111;
+}
+
+.plan-card p {
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.plan-card .precio {
+  margin-top: 1rem;
+  display: block;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #007BFF;
+}
+
+/* Para título centrado de la sección */
+.planes-titulo {
+  font-size: 2rem;
+  font-family: Helvetica Neue Bold Italic;
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 40px;
+  color: #ffffff;
+}
+
+/* Imagen intro de fondo servicios*/
+.fond-heromod {
+  background-image: url("../img/img05.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 200vh;
+  max-height: 1556px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.fond-heromod h2 {
   font-size: 28px;
   color: #ffffff;
   margin-bottom: 20px;
 }
 
-.fondo-heromod img {
+.fond-heromod::before {
+  content: "";
+  background-image: url("../img/img05.jpg");
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  z-index: -1;
+  filter: grayscale(100%) brightness(67%) contrast(106%);
+  -webkit-filter: grayscale(100%) brightness(67%) contrast(106%);
+  /* Otros filtros : blur(2px), sepia(50%), hue-rotate(90deg) */
+}
+
+.fond-heromod > * {
+  position: relative;
+  z-index: 1;
+}
+
+/*====================================================*/
+/*SECION ANTES DEL COMENTARIOS*/
+.section-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  font-family: "Segoe UI", sans-serif;
+  background-color: var(--bg); /* antes: variable.$blanco */
+  color: var(--text); /* antes: #1d1d1d */
+  padding: 174px 8px;
+  box-sizing: border-box;
+}
+
+.text-content {
+  flex: 1 1 45%;
+  padding-right: 30px;
+}
+
+.text-content h1 {
+  font-size: 3rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+  line-height: 1.2;
+  color: var(--text);
+}
+
+.text-content p {
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--text); /* antes: #333 */
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+
+.text-content button {
+  background-color: var(--btn-bg); /* antes: black */
+  color: var(--btn-text); /* antes: white */
+  padding: 14px 36px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.text-content button:hover {
+  background-color: var(--btn-bg-hover); /* antes: #333 */
+}
+
+.image-content {
+  position: relative;
+  flex: 1 1 50%;
+  min-width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-main {
   width: 100%;
-  height: auto;
-  display: block;
+  max-width: 420px;
+  border-radius: 4px;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 55%;
+  left: 10%;
+  transform: translateY(-50%);
+  width: 180px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  border-radius: 6px;
+  z-index: 2;
+}
+
+@media screen and (max-width: 768px) {
+  .section-container {
+    flex-direction: column;
+  }
+  .text-content {
+    padding-right: 0;
+    margin-bottom: 2rem;
+  }
+  .image-overlay {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 140px;
+  }
+}
+/*====================================================*/
+/*--------- Testimonios --------*/
+.rating-header {
+  background: var(--card);
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-family: Helvetica Neue, sans-serif;
+  color: var(--text); /* 🔹 se adapta al modo */
+}
+
+.rating-header img,
+.rating-header svg {
+  width: 80px;
+}
+
+.review-card {
+  background: var(--card); /* 🔹 usa color adaptable */
+  color: var(--text); /* 🔹 texto adaptable */
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.review-card:hover {
+  transform: translateY(-5px);
+}
+
+.profile-pic {
+  width: 70px;
+  height: 70px;
   object-fit: cover;
-  max-height: 600px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  border: 3px solid var(--card);
+  box-shadow: 0 0 0 3px var(--input-border); /* se adapta al modo */
+}
+
+.star-rating {
+  color: #fbc02d; /* las estrellas quedan fijas amarillas */
+  font-size: 1.2rem;
+}
+
+/* Fechas o texto secundario */
+.review-card .date {
+  color: var(--icon-color);
+}
+
+.review-card .quote {
+  color: var(--icon-color);
+  font-style: italic;
 }
 
 /*body*/
@@ -417,7 +523,7 @@ html {
 }
 /* Imagen background, intro de otras paginas (galeria, servicios, sobre mi, contacto)*/
 .heromod {
-  background-image: url("../img/img54.jpg");
+  background-image: url("../img/img05.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -514,15 +620,18 @@ html {
 }
 
 /* ==================================== */
-/* ------------------ Footer ---------------------*/
+/* ------------------ Variables globales --------------------- */
+/* ------------------ Footer --------------------- */
 .footer {
   text-align: center;
   padding: 1.5rem 1rem;
-  background-color: hsl(51.43, 17.5%, 84.31%);
-  color: rgb(16, 16, 16);
+  background-color: var(--footer);
+  color: var(--text);
   font-size: 14px;
-  margin-top: 30px;
-  position: relative; /* Agregado: Necesario para que la flecha "subir" se posicione correctamente */
+  margin-top: 0px;
+  width: 100%;
+  z-index: 1;
+  position: relative;
 }
 
 .redes-sociales {
@@ -534,6 +643,7 @@ html {
 
 .redes-sociales a {
   display: inline-block;
+  color: var(--icon-color);
 }
 
 .redes-sociales img {
@@ -551,35 +661,31 @@ html {
 }
 
 .redes-sociales a {
-  font-size: 24px; /* Tamaño de los iconos */
-  color: #333;
+  font-size: 24px;
   text-decoration: none;
-  margin: 0 5px; /* Espaciado entre iconos */
-  display: inline-block;
+  margin: 0 5px;
 }
 
-/* Icono de Instagram */
+/* Iconos usando Font Awesome */
 .redes-sociales a img[alt=Instagram]::before {
   font-family: "Font Awesome 6 Brands";
   content: "\f16d";
   display: inline-block;
 }
 
-/* Icono de Facebook */
 .redes-sociales a img[alt=Facebook]::before {
   font-family: "Font Awesome 6 Brands";
   content: "\f09a";
   display: inline-block;
 }
 
-/* Icono de WhatsApp */
 .redes-sociales a img[alt=WhatsApp]::before {
   font-family: "Font Awesome 6 Brands";
   content: "\f232";
   display: inline-block;
 }
 
-/* Opcional: Cambiar color al pasar el mouse */
+/* Hover effects */
 .redes-sociales a:hover {
   color: #007bff;
 }
@@ -631,12 +737,221 @@ form {
   margin-bottom: 1rem;
   border-radius: 5px;
   box-shadow: 0 0 3px #ccc;
+  color: #0c0c0c;
 }
 
 .seccion-turnos {
   flex: 1;
   min-width: 300px;
   max-width: 600px;
+}
+
+/* =======================
+ Modo oscuro / claro
+   ======================= */
+:root {
+  --bg: #ffffff;
+  --text: #222222;
+  --card: rgba(255,255,255,0.92);
+  --footer: hsla(51.43,17.5%,84.31%,1); /* blanco en modo claro */
+  --input-bg: #ffffff;
+  --input-text: #222222;
+  --input-border: #cccccc;
+  --btn-bg: #333333;
+  --btn-text: #ffffff;
+  --btn-bg-hover: #555555;
+  --icon-color: #222222;
+}
+
+body.dark-mode {
+  --bg: #121212;
+  --text: #f5f5f5;
+  --card: #1e1e1e;
+  --footer: #000000; /* negro sólido en modo oscuro */
+  --input-bg: #1b1b1b;
+  --input-text: #f5f5f5;
+  --input-border: #444444;
+  --btn-bg: #2b2b2b;
+  --btn-text: #f5f5f5;
+  --btn-bg-hover: #3a3a3a;
+  --icon-color: #f5f5f5;
+}
+
+/* =======================
+   Global
+   ======================= */
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode {
+  --icon-color: #ffffff; /* más blanco que gris */
+}
+
+/* Header y Footer */
+header, footer {
+  background: var(--card);
+  color: var(--text);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Links */
+a {
+  color: var(--text);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+/* Botones */
+button {
+  background: var(--btn-bg);
+  border: none;
+  border-radius: 5px;
+  padding: 8px 14px;
+  cursor: pointer;
+  background: transparent;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+button:hover {
+  background: var(--btn-bg-hover);
+}
+
+/* Estilo general de iconos */
+button svg,
+button i,
+.icon {
+  color: var(--icon-color);
+  fill: var(--icon-color); /* Para SVG */
+  stroke: var(--icon-color); /* Si el ícono usa stroke */
+  opacity: 1 !important; /* Elimina sombreado */
+}
+
+/* Main y secciones */
+main, section {
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Contenedores de texto */
+.text-container, .text-container2 {
+  color: var(--text);
+  padding: 20px;
+  border-radius: 0px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Sección de turnos */
+.seccion-turnos {
+  background: var(--card);
+  color: var(--text);
+  padding: 15px;
+  border-radius: 6px;
+}
+
+/* Inputs */
+input, textarea {
+  background: var(--input-bg);
+  color: var(--input-text);
+  border: 1px solid var(--input-border);
+  border-radius: 5px;
+  padding: 10px;
+  transition: background 0.3s ease, color 0.3s ease, border-color 0.2s ease;
+}
+
+input::placeholder, textarea::placeholder {
+  color: rgba(127, 127, 127, 0.8);
+}
+
+body.dark-mode input::placeholder,
+body.dark-mode textarea::placeholder {
+  color: rgba(220, 220, 220, 0.7);
+}
+
+/* Footer */
+footer {
+  width: 100%;
+  background: var(--footer); /* usa variable */
+  color: var(--text);
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 14px;
+  position: relative;
+  z-index: 1;
+}
+
+/* =======================
+   Sección reservas
+   ======================= */
+.instagram-section {
+  background: var(--bg); /* fondo general */
+  color: var(--text);
+  padding: 40px 20px;
+}
+
+.layout-turnos {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+#formTurno {
+  flex: 1;
+  min-width: 280px;
+  background: var(--card); /* tarjeta clara u oscura */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.seccion-turnos {
+  flex: 1;
+  min-width: 280px;
+  background: var(--card);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  color: var(#222222);
+}
+
+#formTurno input,
+#formTurno button {
+  width: 100%;
+  margin: 8px 0;
+}
+
+/* Iconos (hamburguesa, redes, etc.) */
+i, .bi {
+  color: var(--icon-color);
+  transition: color 0.3s ease;
+}
+
+/* Botón Dark Mode */
+.modo-btn {
+  position: fixed;
+  top: 15px;
+  right: 62px;
+  padding: 8px 12px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  background: var(--card);
+  color: var(--text);
+  box-shadow: 0 1px 0px rgba(0, 0, 0, 0.3);
+  transition: background 0.3s ease, color 0.3s ease, opacity 0.2s ease;
+}
+
+.modo-btn:hover {
+  opacity: 0.85;
 }
 
 /*# sourceMappingURL=style.css.map */

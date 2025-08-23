@@ -1,5 +1,4 @@
 // -------- AUTENTICACIÓN --------
-
 document.getElementById("loginForm").addEventListener("submit", function(e) {
   e.preventDefault();
 
@@ -18,3 +17,19 @@ document.getElementById("loginForm").addEventListener("submit", function(e) {
   localStorage.setItem("correoUsuario", email);
   window.location.href = "../index.html";
 });
+
+// -- Carrusel de imágenes de fondo --
+(function(){
+  const imgs = Array.from(document.querySelectorAll('.bg-slideshow img'));
+  if (!imgs.length) return;
+
+  let i = 0;
+  imgs[i].classList.add('activa');
+
+  setInterval(() => {
+    const actual = i;
+    i = (i + 1) % imgs.length;
+    imgs[actual].classList.remove('activa');
+    imgs[i].classList.add('activa');
+  }, 3000); // cada 3s
+})();

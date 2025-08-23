@@ -1,3 +1,47 @@
+@charset "UTF-8";
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  /*height: 100vh;
+  display: grid;
+  align-items: center;*/
+}
+
+body.pagina-login {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column; /* columna: login arriba, footer abajo */
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.bg-slideshow {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.bg-slideshow img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out; /* <- transición */
+}
+
+.bg-slideshow img.activa {
+  opacity: 1;
+}
+
+/*Prueba en general body
 .pagina-login {
   height: 100vh;
   display: flex;
@@ -5,7 +49,8 @@
   align-items: center;
   background-color: #f0f0f0;
 }
-
+*/
+/* Caja de login
 .contenedor-login {
   background: white;
   padding: 30px 40px;
@@ -15,9 +60,48 @@
   font-family: sans-serif;
   width: 100%;
   max-width: 400px;
+
+
+  Caja de login 
+.contenedor-login {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 30px 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  margin-top: auto;   
+  margin-bottom: auto;
+  z-index: 1;
+
+  position: relative;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 10px;
+  width: 300px;
+  margin: auto;
+  top: 50%;
+  transform: translateY(-50%);
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+*/
+.contenedor-login {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 30px 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  margin-top: auto;
+  margin-bottom: auto;
+  z-index: 1;
 }
 .contenedor-login h1 {
   margin-bottom: 20px;
+  text-align: center;
 }
 .contenedor-login form {
   display: flex;
@@ -48,47 +132,268 @@
   margin-top: 10px;
 }
 
+/* ------------------ Footer ---------------------*/
+.footer {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  font-size: 14px;
+  position: relative;
+  z-index: 1;
+  padding: 10px;
+  color: rgb(16, 16, 16);
+  margin-top: 30px;
+  background-color: white;
+}
+
 /*
+Para tner en cuenta, si quito el fondo/color, se puede agregar un efecto transparente.
+footer {
+  position: fixed; 
+  bottom: 0;
+  width: 100%;
+  padding: 15px;
+  text-align: center;
+  backdrop-filter: blur(6px); opcional, da un efecto vidrio 
+  -webkit-backdrop-filter: blur(6px);
+}
+
+Diferentes tipos de pading para probar  
+  padding: 10px;
+  padding: 1.5rem 1rem;
+*/
+.redes-sociales {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.redes-sociales a {
+  display: inline-block;
+}
+
+.redes-sociales img {
+  width: 28px;
+  height: 28px;
+  transition: opacity 0.3s ease;
+}
+
+.redes-sociales img:hover {
+  opacity: 0.7;
+}
+
+.redes-sociales a img {
+  display: none;
+}
+
+.redes-sociales a {
+  font-size: 24px; /* Tamaño de los iconos */
+  color: #333;
+  text-decoration: none;
+  margin: 0 5px; /* Espaciado entre iconos */
+  display: inline-block;
+}
+
+/* Icono de Instagram */
+.redes-sociales a img[alt=Instagram]::before {
+  font-family: "Font Awesome 6 Brands";
+  content: "\f16d";
+  display: inline-block;
+}
+
+/* Icono de Facebook */
+.redes-sociales a img[alt=Facebook]::before {
+  font-family: "Font Awesome 6 Brands";
+  content: "\f09a";
+  display: inline-block;
+}
+
+/* Icono de WhatsApp */
+.redes-sociales a img[alt=WhatsApp]::before {
+  font-family: "Font Awesome 6 Brands";
+  content: "\f232";
+  display: inline-block;
+}
+
+/* Opcional: Cambiar color al pasar el mouse */
+.redes-sociales a:hover {
+  color: #007bff;
+}
+
+.redes-sociales a img[alt=Instagram]:hover::before {
+  color: #C13584;
+}
+
+.redes-sociales a img[alt=Facebook]:hover::before {
+  color: #3b5998;
+}
+
+.redes-sociales a img[alt=WhatsApp]:hover::before {
+  color: #25D366;
+}
+
+/* =======================
+   Tema: dark mode
+   ======================= */
+:root {
+  --bg: #ffffff;
+  --text: #222222;
+  --card: rgba(255,255,255,0.92);
+  --footer: rgba(255,255,255,0.85);
+  --input-bg: #ffffff;
+  --input-text: #222222;
+  --input-border: #cccccc;
+  --btn-bg: #333333;
+  --btn-text: #ffffff;
+  --btn-bg-hover: #555555;
+}
+
+/* Modo oscuro: solo cambiamos variables */
+body.dark-mode {
+  --bg: #121212;
+  --text: #f5f5f5;
+  --card: rgba(30,30,30,0.9);
+  --footer: rgba(20,20,20,0.85);
+  --input-bg: #1b1b1b;
+  --input-text: #f5f5f5;
+  --input-border: #444444;
+  --btn-bg: #2b2b2b;
+  --btn-text: #f5f5f5;
+  --btn-bg-hover: #3a3a3a;
+}
+
+/* =======================
+   Aplicación de estilos
+   ======================= */
+html, body {
+  height: 100%;
+}
+
 body {
+  background: var(--bg);
+  color: var(--text);
   font-family: Arial, sans-serif;
-  margin: 2rem;
-  background-color: #f0f4f7;
-}*/
-.layout-turnos {
-  display: flex;
-  justify-content: space-between;
-  gap: 40px;
-  align-items: flex-start;
-  flex-wrap: wrap;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
-form {
-  background: white;
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 0 5px #ccc;
-  margin-bottom: 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  flex: 1;
-  min-width: 300px;
+/* Slideshow de fondo atrás */
+.bg-slideshow, .fotorama-background {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+}
+
+/* Contenedor de login */
+.contenedor-login {
+  background: var(--card);
+  color: var(--text); /* Fuerza heredar el color del tema */
+  padding: 30px 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 100%;
   max-width: 400px;
+  z-index: 1;
 }
 
-.turno {
-  background: #fff;
-  border-left: 4px solid #0077cc;
-  padding: 1rem;
-  margin-bottom: 1rem;
+/* Títulos y textos (evitá colores fijos como #333) */
+.contenedor-login h1,
+.contenedor-login h2,
+.contenedor-login p,
+.contenedor-login label {
+  color: var(--text);
+}
+
+/* Inputs */
+.contenedor-login input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  background: var(--input-bg);
+  color: var(--input-text);
+  border: 1px solid var(--input-border);
   border-radius: 5px;
-  box-shadow: 0 0 3px #ccc;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-.seccion-turnos {
-  flex: 1;
-  min-width: 300px;
-  max-width: 600px;
+.contenedor-login input::placeholder {
+  color: rgba(127, 127, 127, 0.9);
+}
+
+body.dark-mode .contenedor-login input::placeholder {
+  color: rgba(220, 220, 220, 0.75);
+}
+
+.contenedor-login input:focus {
+  outline: none;
+  border-color: var(--btn-bg);
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Botón */
+.contenedor-login button {
+  width: 100%;
+  padding: 10px;
+  background: var(--btn-bg);
+  color: var(--btn-text);
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.contenedor-login button:hover {
+  background: var(--btn-bg-hover);
+}
+
+/* Mensaje de error */
+.mensaje-error {
+  color: #ff5a5a;
+}
+
+/* Footer abajo, con colores del tema */
+footer {
+  width: 100%;
+  background: var(--footer);
+  color: var(--text);
+  text-align: center;
+  padding: 10px;
+  font-size: 14px;
+  position: relative;
+  z-index: 1;
+}
+
+.dark-mode footer {
+  background-color: #121212; /* o el tono oscuro que quieras */
+  color: white;
+}
+
+/* Modo oscuro */
+body.dark footer {
+  background-color: rgba(0, 0, 0, 0.3); /* Negro transparente */
+  color: #fff;
+}
+
+/* Botón flotante para cambiar tema */
+.modo-btn {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  padding: 8px 12px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  background: var(--card);
+  color: var(--text);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: background 0.3s ease, color 0.3s ease, opacity 0.2s ease;
+}
+
+.modo-btn:hover {
+  opacity: 0.85;
 }
 
 /*# sourceMappingURL=style.css.map */

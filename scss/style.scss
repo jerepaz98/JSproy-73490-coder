@@ -2,7 +2,7 @@
 //Paginas
 @use 'partials/index';
 //@use 'partials/galeria';
-//@use 'partials/servicios';
+@use 'partials/servicios';
 //@use 'partials/contacto';
 //@use 'partials/sobre-mi';
 
@@ -10,6 +10,12 @@
 @use 'partials/general';
 @use 'partials/header';
 @use 'partials/variables';
-@use 'partials/responsive';
 @use 'partials/arrow';
 @use 'partials/footer';
+@use 'partials/form';
+
+//Responsive
+@use 'partials/responsive';
+
+//Dark mode
+@use 'partials/dark-mode';

@@ -1,0 +1,99 @@
+/* ------------------ Footer ---------------------*/
+.footer {
+  width: 100%;
+  background: rgba(255,255,255,0.8);
+  text-align: center;
+  font-size: 14px;
+  position: relative; 
+  z-index: 1;
+  padding: 10px;
+  color: rgb(16, 16, 16);
+  margin-top: 30px;
+  background-color: white;
+}
+
+/*
+Para tner en cuenta, si quito el fondo/color, se puede agregar un efecto transparente.
+footer {
+  position: fixed; 
+  bottom: 0;
+  width: 100%;
+  padding: 15px;
+  text-align: center;
+  backdrop-filter: blur(6px); opcional, da un efecto vidrio 
+  -webkit-backdrop-filter: blur(6px);
+}
+
+Diferentes tipos de pading para probar  
+  padding: 10px;
+  padding: 1.5rem 1rem;
+*/
+.redes-sociales {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.redes-sociales a {
+  display: inline-block;
+}
+
+.redes-sociales img {
+  width: 28px;
+  height: 28px;
+  transition: opacity 0.3s ease;
+}
+
+.redes-sociales img:hover {
+  opacity: 0.7;
+}
+
+
+.redes-sociales a img {
+  display: none; 
+}
+
+
+.redes-sociales a {
+  font-size: 24px; /* Tamaño de los iconos */
+  color: #333; 
+  text-decoration: none; 
+  margin: 0 5px; /* Espaciado entre iconos */
+  display: inline-block; 
+}
+
+/* Icono de Instagram */
+.redes-sociales a img[alt="Instagram"]::before {
+  font-family: "Font Awesome 6 Brands"; 
+  content: "\f16d"; 
+  display: inline-block; 
+}
+
+/* Icono de Facebook */
+.redes-sociales a img[alt="Facebook"]::before {
+  font-family: "Font Awesome 6 Brands";
+  content: "\f09a"; 
+  display: inline-block;
+}
+
+/* Icono de WhatsApp */
+.redes-sociales a img[alt="WhatsApp"]::before {
+  font-family: "Font Awesome 6 Brands";
+  content: "\f232"; 
+  display: inline-block;
+}
+
+/* Opcional: Cambiar color al pasar el mouse */
+.redes-sociales a:hover {
+    color: #007bff; 
+}
+.redes-sociales a img[alt="Instagram"]:hover::before {
+  color: #C13584; 
+}
+.redes-sociales a img[alt="Facebook"]:hover::before {
+  color: #3b5998; 
+}
+.redes-sociales a img[alt="WhatsApp"]:hover::before {
+  color: #25D366; 
+}

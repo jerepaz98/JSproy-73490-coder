@@ -24,6 +24,7 @@ form.addEventListener("submit", (e) => {
   mostrarTurnos()
 })
 
+// Función para mostrar los turnos en la interfaz
 function mostrarTurnos() {
   listaTurnos.innerHTML = ""
   turnos.forEach((turno, index) => {
@@ -45,3 +46,19 @@ function eliminarTurno(index) {
 }
 
 mostrarTurnos()
+
+// Animación de imágenes al hacer scroll
+document.addEventListener("DOMContentLoaded", () => {
+  const overlay = document.querySelector(".image-overlay");
+
+  // Mostrar la imagen secundaria al hacer scroll
+  window.addEventListener("scroll", () => {
+    const section = document.querySelector(".section-container");
+    const sectionTop = section.getBoundingClientRect().top;
+
+    if (sectionTop < window.innerHeight - 100) {
+      overlay.classList.add("show");
+    }
+  });
+});
+
